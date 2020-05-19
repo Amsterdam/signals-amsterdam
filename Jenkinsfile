@@ -25,11 +25,11 @@ node('BS16 || BS17') {
         stage("Build and push acceptance image") {
             tryStep "build", {
                 docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
-                    def cachedImage = docker.image("ois/signals-amsterdam:acceptance")
+                    /* def cachedImage = docker.image("ois/signals-amsterdam:acceptance")
 
                     if (cachedImage) {
                         cachedImage.pull()
-                    }
+                    }*/
 
                     def image = docker.build("ois/signals-amsterdam:${env.BUILD_NUMBER}",
                     "--shm-size 1G " +
@@ -42,7 +42,7 @@ node('BS16 || BS17') {
                 }
             }
         }
-        stage("Deploy to ACC") {
+        /* stage("Deploy to ACC") {
             tryStep "deployment", {
                 build job: 'Subtask_Openstack_Playbook',
                 parameters: [
@@ -50,9 +50,9 @@ node('BS16 || BS17') {
                     [$class: 'StringParameterValue', name: 'PLAYBOOK', value: 'deploy-signals-amsterdam.yml'],
                 ]
             }
-        }
+        } */
     }
-    if (BRANCH == "master") {
+    /* if (BRANCH == "master") {
         stage("Build and Push Production image") {
             tryStep "build", {
                 docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
@@ -82,5 +82,5 @@ node('BS16 || BS17') {
                 ]
             }
         }
-    }
+    } */
 }
