@@ -1,4 +1,4 @@
-FROM signals-frontend
+FROM docker-registry.data.amsterdam.nl/ois/signalsfrontend:latest
 
 ARG BUILD_ENV=prod
 COPY ${BUILD_ENV}.config.json /usr/share/nginx/html/config.json
