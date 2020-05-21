@@ -1,4 +1,4 @@
-FROM signalsfrontend:latest
+FROM docker-registry.data.amsterdam.nl/ois/signalsfrontend:latest
 
 ARG BUILD_ENV=prod
 
