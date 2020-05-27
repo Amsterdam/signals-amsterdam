@@ -50,12 +50,6 @@ node('BS16 || BS17') {
         stage("Build and Push Production image") {
             tryStep "build", {
                 docker.withRegistry("${DOCKER_REGISTRY_HOST}",'docker_registry_auth') {
-                    def cachedImage = docker.image("ois/signals-amsterdam:latest")
-
-                    if (cachedImage) {
-                        cachedImage.pull()
-                    }
-
                     def image = docker.build("ois/signals-amsterdam:${env.BUILD_NUMBER}",
                         "--shm-size 1G " +
                         "--build-arg BUILD_ENV=prod " +
