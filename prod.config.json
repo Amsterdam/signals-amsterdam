@@ -55,6 +55,7 @@
       "gemeentenaam": "amsterdam"
     }
   },
+  "fetchQuestionsFromBackend": false,
   "theme": {},
   "showVulaanControls": true,
   "ROOT": "https://meldingen.amsterdam.nl/",
