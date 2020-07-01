@@ -29,6 +29,7 @@
     "privacy": "https://www.amsterdam.nl/privacy/"
   },
   "map": {
+    "municipality": "amsterdam",
     "tiles": {
       "args": [
         "https://{s}.data.amsterdam.nl/topo_rd/{z}/{x}/{y}.png"
