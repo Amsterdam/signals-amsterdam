@@ -24,7 +24,8 @@
     "siteTitle": "SIA - Signalen Informatievoorziening Amsterdam",
     "shortTitle": "SIA",
     "footer1": "Bel het Gemeentelijk informatienummer: 14 020",
-    "footer2": "op werkdagen van 08.00 tot 18.00 uur."
+    "footer2": "op werkdagen van 08.00 tot 18.00 uur.",
+    "phoneNumber": "14 020"
   },
   "links": {
     "home": "https://www.amsterdam.nl",
